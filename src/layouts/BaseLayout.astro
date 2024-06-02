@@ -1,0 +1,29 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body class="bg-gray-900 text-white font-chivo antialiased">
+        <main
+            class="grid grid-cols-[12.5rem_minmax(0,_1fr)] gap-4 py-6 px-4 h-screen w-screen"
+        >
+            <aside>
+                <Navbar />
+            </aside>
+            <section class="border-white border-2">
+                <slot />
+            </section>
+        </main>
+    </body>
+</html>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+</style>

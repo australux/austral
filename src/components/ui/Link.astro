@@ -1,0 +1,22 @@
+---
+const { title, href } = Astro.props;
+const url = Astro.url;
+const match = href === url.pathname;
+---
+
+<div>
+    <a
+        href={href}
+        class=`inline-flex gap-2 items-center hover:opacity-100 ${match ? 'opacity-100' : 'opacity-60'}`
+    >
+        <div
+            class=`w-[10px] h-[10px] rounded-full ${match? 'bg-white' : 'bg-gray-600'}`
+        >
+        </div>
+        <span
+            class=`${match ? 'text-white' : 'text-gray-400'} text-xl uppercase`
+        >
+            {title}
+        </span>
+    </a>
+</div>
