@@ -1,0 +1,11 @@
+---
+interface Props {
+    cn?: string;
+}
+
+const { cn } = Astro.props;
+---
+
+<div class={cn}>
+    <slot />
+</div>

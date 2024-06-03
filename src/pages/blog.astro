@@ -1,9 +1,24 @@
 ---
-import Header from "../components/Header.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-const url = Astro.url.pathname.slice(1);
+import { getCollection } from "astro:content";
+import Header from "@/components/Header.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPostCard from "@/components/BlogPostCard.astro";
+const url = Astro.url.pathname.replace(/\//g, "");
+const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout>
     <Header title={url} />
+    <div class="grid grid-cols-2 gap-20 px-20">
+        {
+            allPosts.map((post) => (
+                <BlogPostCard
+                    slug={post.slug}
+                    src={post.data.image.src}
+                    alt={post.data.image.alt}
+                    title={post.data.title}
+                />
+            ))
+        }
+    </div>
 </BaseLayout>

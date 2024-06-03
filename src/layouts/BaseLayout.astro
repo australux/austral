@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import Navbar from "@/components/Navbar.astro";
 ---
 
 <html lang="en">
@@ -17,7 +17,7 @@ import Navbar from "../components/Navbar.astro";
             <aside>
                 <Navbar />
             </aside>
-            <section class="border-white border-2">
+            <section class="flex flex-col items-center">
                 <slot />
             </section>
         </main>

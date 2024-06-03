@@ -1,0 +1,15 @@
+---
+interface Props {
+    src: string;
+    author: string;
+    date: Date;
+}
+
+const { src, author, date } = Astro.props;
+---
+
+<div class="w-full flex gap-4 items-center">
+    <img src={src} alt=`pfp_${author}` class="rounded-full h-8" />
+    <p class="text-xl font-bold">{author}</p>
+    <span class="text-xl text-gray-400">{date.toLocaleDateString()}</span>
+</div>

@@ -1,0 +1,18 @@
+---
+import Byline from "@/components/Byline.astro";
+import Header from "@/components/Header.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const { subtitle, frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+    <Header title="blog" subtitle={subtitle} />
+    <div class="w-7/12 mt-12 flex flex-col gap-4">
+        <Byline
+            src={frontmatter.pfp.src}
+            author={frontmatter.author}
+            date={frontmatter.publishDate}
+        />
+        <slot />
+    </div>
+</BaseLayout>
