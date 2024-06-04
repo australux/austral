@@ -1,12 +1,7 @@
 ---
-title: "Post 1"
-pfp:
-    src: https://utfs.io/f/6ebece8c-992c-46ef-b5fc-c18b07b0ae24-fkj1h.svg
-publishDate: 2024-06-02
-tags: ["development", "react"]
+title: Project 2
 image:
-    src: https://utfs.io/f/c5f4acd3-803f-48e2-95a0-d0dccb8f3188-qqbpro.jpg
-    alt: "abstract image"
+    src: https://utfs.io/f/42852faa-0695-425e-88f8-e561e83358df-f63zho.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis laoreet vulputate. Vestibulum volutpat nisl sed purus sollicitudin, vel facilisis lacus consectetur. Ut tempor nibh eu lectus sodales, nec facilisis ligula venenatis. Mauris tincidunt nulla in felis eleifend accumsan. Pellentesque condimentum nunc nisl, sit amet porta lectus tristique quis. In hac habitasse platea dictumst. Phasellus finibus finibus felis a sollicitudin. Nulla nec porta purus. Aliquam scelerisque, est sit amet molestie imperdiet, metus augue dictum turpis, eu dapibus est est faucibus elit. Duis quis gravida mi, et malesuada mi. Curabitur porttitor dapibus congue. Ut dignissim rutrum urna. Pellentesque ut arcu commodo, accumsan velit nec, laoreet sem.

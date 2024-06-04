@@ -4,21 +4,23 @@ import Header from "@/components/Header.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 
-const url = Astro.url.pathname.slice(1);
+const url = Astro.url.pathname.replace(/\//g, "");
 const allProjects = await getCollection("projects");
 ---
 
 <BaseLayout>
     <Header title={url} />
-    <div class="grid grid-cols-2 gap-20 px-20">
-        {
-            allProjects.map((project) => (
-                <ProjectCard
-                    slug={project.slug}
-                    src={project.data.image.src}
-                    title={project.data.title}
-                />
-            ))
-        }
+    <div class="8/12">
+        <div class="grid grid-cols-2 gap-20 w-full pt-9">
+            {
+                allProjects.map((project) => (
+                    <ProjectCard
+                        slug={project.slug}
+                        src={project.data.image.src}
+                        title={project.data.title}
+                    />
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
