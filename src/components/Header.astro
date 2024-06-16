@@ -5,17 +5,20 @@ const match = `/${title}` === url.pathname || `/${title}/` === url.pathname;
 ---
 
 <header
-    class="w-full flex justify-end items-baseline gap-2 sticky top-0 bg-gray-900 border-b border-gray-600"
+    class="w-full flex flex-col-reverse items-end pb-2 md:pb-0 lg:flex-row lg:justify-end lg:items-baseline gap-2 sticky top-0 bg-[#101720] border-b border-gray-600"
 >
     {
         !match && (
-            <span class="text-[2rem] uppercase" transition:animate="slide">
+            <span
+                class="text-3xl md:text-[2rem] uppercase text-orange-500"
+                transition:animate="slide"
+            >
                 {subtitle}
             </span>
         )
     }
     <h2
-        class=`${match ? 'text-white' : 'text-gray-600'} text-8xl uppercase`
+        class=`${match ? 'text-white' : 'text-gray-600'} text-6xl md:text-8xl uppercase`
         transition:animate="fade"
     >
         {title}

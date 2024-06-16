@@ -4,7 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const url = Astro.url.pathname.replace(/\//g, "");
 ---
 
-<BaseLayout>
+<BaseLayout title="About">
     <Header title={url} />
     <div class="flex flex-col items-center pt-9">
         <div class="w-80 h-80 rounded-full overflow-clip">

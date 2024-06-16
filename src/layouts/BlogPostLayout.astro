@@ -2,13 +2,13 @@
 import Byline from "@/components/Byline.astro";
 import Header from "@/components/Header.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-const { subtitle, frontmatter } = Astro.props;
+const { subtitle, frontmatter, title } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={`${frontmatter.title} | Blog`}>
     <Header title="blog" subtitle={subtitle} />
-    <div class="flex flex-col items-center w-full overflow-auto">
-        <div class="flex flex-col w-7/12 pt-9 gap-4">
+    <div class="flex flex-col items-center w-full overflow-auto entry">
+        <div class="flex flex-col w-10/12 lg:w-7/12 pt-9 gap-4">
             <Byline
                 src={frontmatter.pfp.src}
                 author={frontmatter.author}
@@ -17,4 +17,9 @@ const { subtitle, frontmatter } = Astro.props;
             <slot />
         </div>
     </div>
+    <style>
+        .entry {
+            scrollbar-width: thin;
+        }
+    </style>
 </BaseLayout>

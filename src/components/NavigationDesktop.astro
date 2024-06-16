@@ -1,0 +1,14 @@
+---
+import Link from "./ui/Link.astro";
+---
+
+<div class="hidden md:flex flex-col justify-between h-full pl-4">
+    <div class="w-[5px] border-r-2 border-gray-600 h-full opacity-60"></div>
+    <ol class="flex flex-col">
+        <Link href="/about" title="about" />
+        <div class="w-[5px] border-r-2 border-gray-600 h-6 opacity-60"></div>
+        <Link href="/blog" title="blog" />
+        <div class="w-[5px] border-r-2 border-gray-600 h-6 opacity-60"></div>
+        <Link href="/projects" title="projects" />
+    </ol>
+</div>

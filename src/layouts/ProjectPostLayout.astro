@@ -4,9 +4,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const { subtitle, frontmatter } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={`${frontmatter.title} | Projects`}>
     <Header title="projects" subtitle={subtitle} />
-    <div class="flex flex-col items-center overflow-auto">
+    <div class="flex flex-col items-center overflow-auto entry">
         <div class="w-full h-[30rem]">
             <img
                 src={frontmatter.image.src}
@@ -15,8 +15,14 @@ const { subtitle, frontmatter } = Astro.props;
                 loading="lazy"
             />
         </div>
-        <div class="w-7/12 mt-9 gap-4">
+        <div class="w-10/12 lg:w-7/12 mt-9 gap-4">
             <slot />
         </div>
     </div>
+    <style>
+        .entry {
+            scrollbar-width: thin;
+            scrollbar-color: #4b5563 #101720;
+        }
+    </style>
 </BaseLayout>

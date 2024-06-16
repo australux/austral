@@ -1,27 +1,18 @@
 ---
-import Link from "@/components/ui/Link.astro";
 import LogoBrand from "@/components/ui/LogoBrand.astro";
 import LogoOutlineWhite from "@/components/ui/LogoOutlineWhite.astro";
+import NavigationMobile from "./NavigationMobile.astro";
+import NavigationDesktop from "./NavigationDesktop.astro";
 const url = Astro.url;
 const match = url.pathname === "/";
 ---
 
-<div class="flex flex-col h-full gap-4">
+<div class="flex md:flex-col h-full md:gap-4 justify-between md:pb-2">
     <div class="self-start">
         <a href="/">
             {match ? <LogoBrand /> : <LogoOutlineWhite />}
         </a>
     </div>
-    <div class="flex flex-col justify-between h-full pl-4">
-        <div class="w-[5px] border-r-2 border-gray-600 h-full opacity-60"></div>
-        <ol class="flex flex-col">
-            <Link href="/about" title="about" />
-            <div class="w-[5px] border-r-2 border-gray-600 h-6 opacity-60">
-            </div>
-            <Link href="/blog" title="blog" />
-            <div class="w-[5px] border-r-2 border-gray-600 h-6 opacity-60">
-            </div>
-            <Link href="/projects" title="projects" />
-        </ol>
-    </div>
+    <NavigationDesktop />
+    <NavigationMobile />
 </div>
